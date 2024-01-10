@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Task List Generator</title>
+</head>
+<body>
+    <div id="list-container">
+        <div id="list-heading">
+            <h2 id="list-name">Tasks</h2>
+            <button id="add-task-button" class="minimal-button">+</button>
+        </div>
+        <div id="task-list">
+        </div>
+    </div>
+
+    <dialog id="add-task-prompt">
+        <form action="submit" id="new-task-form">
+            <input type="text" placeholder="Take out trash..." id="task-input" required>
+            <div id="task-prompt-buttons">
+                <button id="submit-prompt">Submit</button>
+                <button id="cancel-prompt" type="button">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
