@@ -1,111 +1,140 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: #f3ebcc;
-    font-family: Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  background-color: #f3ebcc;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#list-container{
-    /* Border is just for editing purposes */
-    border: 1px solid black;
-    border-radius: 10px;
+#list-container {
+  /* Border is just for editing purposes */
+  border: 1px solid black;
+  border-radius: 10px;
 
-    /* Fixed w / h ratio, width changes depending on browser size */
-    aspect-ratio: 11 / 16;
-    width: 20vw;
-    min-width: 250px;
-    max-width: 600px;
+  /* Fixed w / h ratio, width changes depending on browser size */
+  aspect-ratio: 11 / 16;
+  width: 30vw;
+  min-width: 250px;
+  max-width: 600px;
 
-    background-color: #f9f7f3;
-
+  background-color: #f9f7f3;
 }
 
-#list-heading{
-    display: flex;
-    gap: 10px;
-    padding: 5px 10px;
-    min-height: 35px;
+#list-heading {
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+  min-height: 35px;
 
-    border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 
-    /* Border is just for editing purposes */
-    border-bottom: 1px solid black;
+  /* Border is just for editing purposes */
+  border-bottom: 1px solid black;
 
-    /* Centers on cross-axis (vertically) */
-    align-items: center;
+  /* Centers on cross-axis (vertically) */
+  align-items: center;
 
-    /* Gradient from https://cssgradient.io/, have this value be semi-random using JS */
-    background: rgb(254,255,93);
-    background: linear-gradient(230deg, rgba(254,255,93,1) 0%, rgba(251,223,146,1) 56%, rgba(255,175,0,1) 100%); 
+  /* Gradient from https://cssgradient.io/, have this value be semi-random using JS */
+  background: linear-gradient(
+    230deg,
+    rgba(254, 255, 93, 1) 0%,
+    rgba(251, 223, 146, 1) 56%,
+    rgba(255, 175, 0, 1) 100%
+  );
 }
 
-#list-name{
-    margin-right: auto;
+#list-name {
+  margin-right: auto;
 }
 
-#add-task-button{
-    font-size: 15px;
+#add-task-button {
+  font-size: 15px;
 }
 
-#add-task-button:hover{
-
+#task-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#task-list{
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+#task-input {
+  width: 97%;
 }
 
-.task{
-    border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
+#task-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
 }
 
-#task-info{
-    margin-right: auto;
-    min-height: 10%;
+.task {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 50px;
 }
 
-#task-settings{
-    display: flex;
+#task-info {
+  margin-right: auto;
+  user-select: none;
 }
 
-#task-settings button{
-    padding: 0px;
-    margin: 5px;
+#task-settings {
+  display: flex;
 }
 
-
-#add-task-prompt{
-    width: 200px;
-    height: 50px;
-    border: 1px solid black;
-    padding: 10px 5px;
-
-    /* Center the dialog */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#task-settings button {
+  padding: 0px;
+  margin: 5px;
 }
 
-.hidden{
-    display: none;
+.strike-through {
+  text-decoration: line-through;
 }
 
-.minimal-button{
-    border: none;
-    background: none;
-    text-align: center;
-    padding: 5px 10px;
-    cursor: pointer;
+#add-task-prompt {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  padding: 10px 5px;
+  overflow-y: hidden;
+  text-align: center;
+
+  /* Center the dialog */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.minimal-button {
+  border: none;
+  background: none;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  width: 50px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: linear-gradient(
+    230deg,
+    rgba(254, 255, 93, 1) 0%,
+    rgba(251, 223, 146, 1) 56%,
+    rgba(255, 175, 0, 1) 100%
+  );
 }
